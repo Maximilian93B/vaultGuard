@@ -13,7 +13,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-
+// Password Function 
 function generatePassword() {
     var length = prompt("Enter password length (between 8 and 128 characters):");
 
@@ -35,7 +35,7 @@ function generatePassword() {
         includeNumbers = confirm("Include numbers?");
         includeSpecialChars = confirm("Include special characters?");
     }
-
+// Return 
     return generatePasswordFromCriteria({
         length: parseInt(length),
         includeLowercase: includeLowercase,
@@ -44,7 +44,7 @@ function generatePassword() {
         includeSpecialChars: includeSpecialChars
     });
 }
-
+// Data from Password 
 function generatePasswordFromCriteria(criteria) {
     var allChars = "";
     var password = "";
@@ -65,7 +65,7 @@ function generatePasswordFromCriteria(criteria) {
     for (var i = 0; i < criteria.length; i++) {
         password += allChars.charAt(Math.floor(Math.random() * allChars.length));
     }
-
+// Print password 
     return password;
 }
 
